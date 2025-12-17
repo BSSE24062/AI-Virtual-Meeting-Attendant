@@ -2,45 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AI Meeting Attendant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Meeting - AI Virtual Attendant</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body class="container">
-
-    <!-- MEETING TITLE -->
-    <h2 id="meetingTitle" style="text-align:center; margin-bottom:20px;">
-        Meeting
-    </h2>
-
-    <!-- AI AVATAR -->
-     <div class="recording">
-        <div class="recording-dot"></div>
-        Live AI Attendant
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
     </div>
 
-    <div class="avatar-container">
-        <img src="assets/avatar.png" alt="AI Avatar" class="avatar">
-        <p class="ai-label">AI Virtual Attendant</p>
-    </div>
+    <div class="container" style="max-width: 750px;">
+        <!-- Logo Header -->
+        <div style="text-align: center; margin-bottom: 15px;">
+            <img src="assets/logo.png" alt="Z4 Technologies" style="height: 35px; width: auto;">
+        </div>
 
-    <!-- INTERACTION AREA -->
-    <div class="interaction-box">
-        <p><strong>Last Question:</strong></p>
-        <p id="lastQuestion" class="qa-box">—</p>
+        <!-- Meeting Header -->
+        <div style="text-align: center; margin-bottom: 25px;">
+            <h2 id="meetingTitle" style="margin-bottom: 10px;">Meeting</h2>
+            <p id="meetingType" style="color: var(--text-dim); font-size: 14px; margin: 0;"></p>
+        </div>
 
-        <p><strong>AI Response:</strong></p>
-        <p id="aiResponse" class="qa-box">Waiting for a question...</p>
+        <!-- Live Indicator -->
+        <div class="recording">
+            <div class="recording-dot"></div>
+            <span style="font-weight: 600;">LIVE</span> - AI Attendant Active
+        </div>
 
-        <button class="ask-btn" onclick="askQuestion()">
-            🎤 Ask Question (Click & Speak)
-        </button>
-    </div>
+        <!-- AI Avatar Section -->
+        <div class="avatar-container">
+            <img id="avatarImg" src="assets/avatar.png" alt="AI Avatar" class="avatar">
+            <p class="ai-label">
+                <span id="avatarName">AI</span> Virtual Attendant
+            </p>
+        </div>
 
-    <!-- NAVIGATION -->
-    <div class="nav-buttons">
-        <button onclick="window.location.href='dashboard.html'">⬅ Back to Dashboard</button>
-        <button onclick="window.location.href='history.html'">📜 View History</button>
+        <!-- Interaction Area -->
+        <div class="interaction-box">
+            <!-- Last Question -->
+            <div style="margin-bottom: 20px;">
+                <p style="margin: 0 0 8px 0;"><strong>LAST QUESTION</strong></p>
+                <div id="lastQuestion" class="qa-box">
+                    Click the button below to ask a question
+                </div>
+            </div>
+
+            <!-- AI Response -->
+            <div style="margin-bottom: 25px;">
+                <p style="margin: 0 0 8px 0;"><strong>AI RESPONSE</strong></p>
+                <div id="aiResponse" class="qa-box">
+                    Waiting for your question...
+                </div>
+            </div>
+
+            <!-- Voice Button -->
+            <button class="ask-btn" onclick="askQuestion()" id="voiceBtn">
+                🎤 Ask Question
+            </button>
+
+            <!-- Browser Support Notice -->
+            <p id="browserNotice" style="text-align: center; font-size: 12px; color: var(--text-dim); margin-top: 15px; display: none;">
+                ⚠️ Voice recognition works best in Chrome or Edge
+            </p>
+        </div>
+
+        <!-- Meeting Stats -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 25px 0;">
+            <div style="text-align: center; padding: 15px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 1px solid var(--glass-border);">
+                <div style="font-size: 20px; font-weight: 700; color: var(--primary);" id="questionCount">0</div>
+                <div style="font-size: 11px; color: var(--text-dim); margin-top: 3px;">Questions</div>
+            </div>
+            <div style="text-align: center; padding: 15px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 1px solid var(--glass-border);">
+                <div style="font-size: 20px; font-weight: 700; color: var(--secondary);" id="duration">00:00</div>
+                <div style="font-size: 11px; color: var(--text-dim); margin-top: 3px;">Duration</div>
+            </div>
+            <div style="text-align: center; padding: 15px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 1px solid var(--glass-border);">
+                <div style="font-size: 20px; font-weight: 700; color: #00ffcc;">✓</div>
+                <div style="font-size: 11px; color: var(--text-dim); margin-top: 3px;">Active</div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <button onclick="window.location.href='dashboard.html'">
+                ← Dashboard
+            </button>
+            <button onclick="endMeeting()">
+                📜 End & View Summary
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--glass-border);">
+            <p style="font-size: 11px; color: var(--text-dim); margin: 0;">
+                Powered by Z4 Technologies © 2025
+            </p>
+        </div>
     </div>
 
     <script src="js/meeting.js"></script>

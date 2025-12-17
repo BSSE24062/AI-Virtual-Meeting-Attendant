@@ -1,21 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Meeting Prompt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Setup - AI Virtual Attendant</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
-    <h2>Meeting Configuration</h2>
-    <input id="title" placeholder="Meeting Title">
-    <select id="type">
-        <option>Introduction</option>
-        <option>Project Discussion</option>
-        <option>Client Meeting</option>
-    </select>
-    <textarea id="prompt" placeholder="Instructions for AI"></textarea>
-    <button onclick="savePrompt()">Start Meeting</button>
-</div>
-<script src="js/prompt.js"></script>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <div class="container" style="max-width: 650px;">
+        <!-- Logo Header -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="assets/logo.png" alt="Z4 Technologies" style="height: 40px; width: auto;">
+        </div>
+
+        <h2>Configure Meeting</h2>
+        <p style="text-align:center; opacity:0.8; margin-bottom: 25px;">
+            Set up your AI attendant's context and behavior
+        </p>
+
+        <form id="meetingForm" onsubmit="savePrompt(event)">
+            <!-- Meeting Title -->
+            <label style="display: block; margin-bottom: 8px; color: var(--primary); font-weight: 600; font-size: 14px;">
+                Meeting Title *
+            </label>
+            <input id="title" type="text" placeholder="e.g., Q4 Strategy Review" required>
+
+            <!-- Meeting Type -->
+            <label style="display: block; margin: 20px 0 8px 0; color: var(--primary); font-weight: 600; font-size: 14px;">
+                Meeting Type *
+            </label>
+            <select id="type" required>
+                <option value="">Select meeting type...</option>
+                <option value="Introduction">Introduction Meeting</option>
+                <option value="Project Discussion">Project Discussion</option>
+                <option value="Client Meeting">Client Meeting</option>
+                <option value="Team Standup">Team Standup</option>
+                <option value="Performance Review">Performance Review</option>
+                <option value="Brainstorming">Brainstorming Session</option>
+                <option value="Training">Training/Workshop</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <!-- AI Instructions -->
+            <label style="display: block; margin: 20px 0 8px 0; color: var(--primary); font-weight: 600; font-size: 14px;">
+                Meeting Context & Guidelines (Optional)
+            </label>
+            <textarea id="prompt" placeholder="Example: This is a client presentation meeting. Focus on being professional and enthusiastic. Mention our recent project successes. If asked technical questions, offer to schedule a detailed follow-up." rows="5"></textarea>
+
+            <!-- Quick Templates -->
+            <div style="margin: 20px 0;">
+                <label style="display: block; margin-bottom: 10px; color: var(--text-dim); font-size: 13px;">
+                    Quick Templates:
+                </label>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button type="button" onclick="useTemplate('intro')" style="width: auto; padding: 8px 16px; font-size: 13px; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border);">
+                        📋 Introduction
+                    </button>
+                    <button type="button" onclick="useTemplate('update')" style="width: auto; padding: 8px 16px; font-size: 13px; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border);">
+                        📊 Status Update
+                    </button>
+                    <button type="button" onclick="useTemplate('discussion')" style="width: auto; padding: 8px 16px; font-size: 13px; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border);">
+                        💬 Discussion
+                    </button>
+                </div>
+            </div>
+
+            <!-- Info Box -->
+            <div style="padding: 15px; background: rgba(0, 230, 230, 0.1); border: 1px solid rgba(0, 230, 230, 0.3); border-radius: 12px; margin: 20px 0;">
+                <p style="margin: 0; font-size: 13px; color: var(--text-dim);">
+                    <strong style="color: var(--primary);">💡 Tip:</strong> These guidelines help set the tone and context. Your AI will naturally introduce itself using your profile (name, role, bio) and use these guidelines for decision-making.
+                </p>
+            </div>
+
+            <button type="submit">
+                🚀 Start Meeting
+            </button>
+        </form>
+
+        <button onclick="window.location.href='dashboard.html'" style="background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border); margin-top: 10px;">
+            ← Back to Dashboard
+        </button>
+    </div>
+
+    <script src="js/prompt.js"></script>
 </body>
 </html>

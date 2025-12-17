@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - AI Virtual Attendant</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
 
-<div class="container">
-    <h2>Login</h2>
+    <div class="container">
+        <!-- Logo Header -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="assets/logo.png" alt="Z4 Technologies" style="height: 50px; width: auto; margin-bottom: 10px;">
+            <p style="font-size: 11px; color: var(--text-dim); margin: 5px 0 0 0;">Z4 Technologies</p>
+        </div>
 
-    <input id="email" placeholder="Email">
-    <input id="password" type="password" placeholder="Password">
+        <h2>Welcome Back</h2>
+        <p style="text-align:center; opacity:0.8; margin-bottom: 25px;">
+            Sign in to access your AI attendant
+        </p>
 
-    <button onclick="login()">Login</button>
+        <form id="loginForm" onsubmit="login(event)">
+            <input id="email" type="email" placeholder="Email Address" required>
+            
+            <input id="password" type="password" placeholder="Password" required>
 
-    <p style="text-align:center; margin-top:10px; font-size:14px;">
-        Don’t have an account?
-        <span style="color:#00ffff; cursor:pointer;"
-              onclick="window.location.href='signup.html'">
-            Sign Up
-        </span>
-    </p>
-</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin: 15px 0;">
+                <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.7);">
+                    <input type="checkbox" style="width: auto; margin: 0;">
+                    Remember me
+                </label>
+                <a href="#" style="color: var(--primary); font-size: 14px; text-decoration: none;">Forgot Password?</a>
+            </div>
 
-<script src="js/auth.js"></script>
+            <button type="submit">Sign In</button>
+        </form>
+
+        <p style="text-align:center; margin-top:20px; font-size:14px;">
+            Don't have an account?
+            <span style="color: var(--primary); cursor:pointer; font-weight: 600;"
+                  onclick="window.location.href='signup.html'">
+                Sign Up
+            </span>
+        </p>
+    </div>
+
+    <script src="js/auth.js"></script>
 </body>
 </html>

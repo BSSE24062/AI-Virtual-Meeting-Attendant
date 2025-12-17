@@ -1,17 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Meeting History</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting History - AI Virtual Attendant</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="container">
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
 
-<h2>Previous Meetings</h2>
+    <div class="container" style="max-width: 900px;">
+        <!-- Logo Header -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="assets/logo.png" alt="Z4 Technologies" style="height: 40px; width: auto;">
+        </div>
 
-<div id="history"></div>
+        <h2>Meeting History</h2>
+        <p style="text-align:center; opacity:0.8; margin-bottom: 30px;">
+            Complete logs of all your AI-attended meetings
+        </p>
 
-<button onclick="goBack()">⬅ Back to Dashboard</button>
+        <!-- Stats Summary -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px;">
+            <div style="background: rgba(0, 230, 230, 0.1); padding: 20px; border-radius: 16px; border: 1px solid rgba(0, 230, 230, 0.3); text-align: center;">
+                <div style="font-size: 32px; font-weight: 700; color: var(--primary);" id="totalMeetings">0</div>
+                <div style="font-size: 13px; color: var(--text-dim); margin-top: 5px;">Total Meetings</div>
+            </div>
+            <div style="background: rgba(102, 126, 234, 0.1); padding: 20px; border-radius: 16px; border: 1px solid rgba(102, 126, 234, 0.3); text-align: center;">
+                <div style="font-size: 32px; font-weight: 700; color: var(--secondary);" id="totalQuestions">0</div>
+                <div style="font-size: 13px; color: var(--text-dim); margin-top: 5px;">Questions Answered</div>
+            </div>
+        </div>
 
-<script src="js/history.js"></script>
+        <!-- Filter/Search -->
+        <div style="margin-bottom: 25px;">
+            <input type="text" id="searchInput" placeholder="🔍 Search meetings by title or type..." onkeyup="filterMeetings()" style="margin: 0;">
+        </div>
+
+        <!-- Meetings Container -->
+        <div id="history"></div>
+
+        <!-- Empty State -->
+        <div id="emptyState" style="text-align: center; padding: 60px 20px; display: none;">
+            <div style="font-size: 64px; margin-bottom: 20px; opacity: 0.5;">📭</div>
+            <h3 style="color: var(--text-dim); font-weight: 400;">No meetings found</h3>
+            <p style="color: var(--text-dim); font-size: 14px; margin-top: 10px;">
+                Start your first meeting to see history here
+            </p>
+            <button onclick="window.location.href='dashboard.html'" style="width: auto; padding: 12px 30px; margin-top: 20px;">
+                Start New Meeting
+            </button>
+        </div>
+
+        <!-- Navigation -->
+        <button onclick="goBack()" style="margin-top: 20px;">
+            ← Back to Dashboard
+        </button>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--glass-border);">
+            <p style="font-size: 11px; color: var(--text-dim); margin: 0;">
+                © 2025 Z4 Technologies. All rights reserved.
+            </p>
+        </div>
+    </div>
+
+    <script src="js/history.js"></script>
 </body>
 </html>

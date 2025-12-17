@@ -1,29 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AI Virtual Attendant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Attendant - Never Miss a Meeting</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
 
-<div class="container">
-    <h2>Welcome to AI Meeting Attendant</h2>
-    <p style="text-align:center; opacity:0.8;">
-        Please login to continue
-    </p>
+    <!-- Hero Section -->
+    <div class="hero-container">
+        <div class="hero-content">
+            <!-- Logo/Brand -->
+            <div class="brand">
+                <img src="assets/logo.png" alt="Z4 Technologies" style="height: 60px; width: auto; margin-bottom: 10px;">
+                <h1 class="brand-name">AI Attendant</h1>
+                <!--<p style="font-size: 12px; color: var(--text-dim); margin-top: 5px;">by Z4 Technologies</p>-->
+            </div>
 
-    <button onclick="goLogin()">Login</button>
-    <button onclick="goSignup()" style="margin-top:8px;">Sign Up</button>
-</div>
+            <!-- Tagline -->
+            <h2 class="hero-title">Your AI-Powered Meeting Representative</h2>
+            <p class="hero-subtitle">
+                Never miss another meeting. Let your AI twin attend on your behalf with intelligent responses and real-time interaction.
+            </p>
 
-<script>
-function goLogin() {
-    window.location.href = "login.html";
-}
-function goSignup() {
-    window.location.href = "signup.html";
-}
-</script>
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Voice Interaction</h3>
+                    <p>Natural speech recognition and responses</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Smart AI</h3>
+                    <p>Context-aware answers based on your profile</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Meeting History</h3>
+                    <p>Complete logs of all interactions</p>
+                </div>
+            </div>
 
+            <!-- CTA Buttons -->
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="goSignup()">
+                    <span>Get Started</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="btn btn-secondary" onclick="goLogin()">
+                    <span>Sign In</span>
+                </button>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="social-proof">
+                <div class="proof-item">
+                    <span class="proof-number">10K+</span>
+                    <span class="proof-label">Active Users</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">50K+</span>
+                    <span class="proof-label">Meetings Attended</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">99%</span>
+                    <span class="proof-label">Satisfaction</span>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--glass-border);">
+                <p style="font-size: 13px; color: var(--text-dim); margin: 0;">
+                    © 2025 Z4 Technologies. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goLogin() {
+            window.location.href = "login.html";
+        }
+        function goSignup() {
+            window.location.href = "signup.html";
+        }
+    </script>
 </body>
 </html>

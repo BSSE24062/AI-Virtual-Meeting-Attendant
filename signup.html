@@ -1,31 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - AI Virtual Attendant</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
 
-<div class="container">
-    <h2>Create Account</h2>
+    <div class="container">
+        <!-- Logo Header -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="assets/logo.png" alt="Z4 Technologies" style="height: 50px; width: auto; margin-bottom: 10px;">
+            <p style="font-size: 11px; color: var(--text-dim); margin: 5px 0 0 0;">Z4 Technologies</p>
+        </div>
 
-    <input id="name" placeholder="Full Name">
-    <input id="email" placeholder="Email">
-    <input id="role" placeholder="Role / Title">
-    <textarea id="bio" placeholder="Short Professional Bio"></textarea>
-    <input id="password" type="password" placeholder="Password">
+        <h2>Create Your AI Profile</h2>
+        <p style="text-align:center; opacity:0.8; margin-bottom: 25px;">
+            Set up your virtual attendant in just a few steps
+        </p>
 
-    <button onclick="signup()">Sign Up</button>
+        <form id="signupForm" onsubmit="signup(event)">
+            <input id="name" type="text" placeholder="Full Name *" required>
+            
+            <input id="email" type="email" placeholder="Email Address *" required>
+            
+            <input id="role" type="text" placeholder="Your Role (e.g., Software Engineer)" required>
+            
+            <textarea id="bio" placeholder="Professional Bio (Help your AI represent you better)" rows="3"></textarea>
+            
+            <input id="password" type="password" placeholder="Create Password *" required minlength="6">
+            
+            <input id="confirmPassword" type="password" placeholder="Confirm Password *" required>
 
-    <p style="text-align:center; margin-top:10px; font-size:14px;">
-        Already have an account?
-        <span style="color:#00ffff; cursor:pointer;"
-              onclick="window.location.href='login.html'">
-            Login
-        </span>
-    </p>
-</div>
+            <div style="display: flex; align-items: start; gap: 10px; margin: 15px 0;">
+                <input type="checkbox" id="terms" required style="width: auto; margin: 5px 0 0 0;">
+                <label for="terms" style="font-size: 13px; color: rgba(255,255,255,0.7);">
+                    I agree to the Terms of Service and Privacy Policy
+                </label>
+            </div>
 
-<script src="js/auth.js"></script>
+            <button type="submit">Create Account</button>
+        </form>
+
+        <p style="text-align:center; margin-top:20px; font-size:14px;">
+            Already have an account?
+            <span style="color: var(--primary); cursor:pointer; font-weight: 600;"
+                  onclick="window.location.href='login.html'">
+                Sign In
+            </span>
+        </p>
+    </div>
+
+    <script src="js/auth.js"></script>
 </body>
 </html>
