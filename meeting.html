@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Meeting Attendant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="container">
+
+    <!-- MEETING TITLE -->
+    <h2 id="meetingTitle" style="text-align:center; margin-bottom:20px;">
+        Meeting
+    </h2>
+
+    <!-- AI AVATAR -->
+     <div class="recording">
+        <div class="recording-dot"></div>
+        Live AI Attendant
+    </div>
+
+    <div class="avatar-container">
+        <img src="assets/avatar.png" alt="AI Avatar" class="avatar">
+        <p class="ai-label">AI Virtual Attendant</p>
+    </div>
+
+    <!-- INTERACTION AREA -->
+    <div class="interaction-box">
+        <p><strong>Last Question:</strong></p>
+        <p id="lastQuestion" class="qa-box">—</p>
+
+        <p><strong>AI Response:</strong></p>
+        <p id="aiResponse" class="qa-box">Waiting for a question...</p>
+
+        <button class="ask-btn" onclick="askQuestion()">
+            🎤 Ask Question (Click & Speak)
+        </button>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-buttons">
+        <button onclick="window.location.href='dashboard.html'">⬅ Back to Dashboard</button>
+        <button onclick="window.location.href='history.html'">📜 View History</button>
+    </div>
+
+    <script src="js/meeting.js"></script>
+</body>
+</html>

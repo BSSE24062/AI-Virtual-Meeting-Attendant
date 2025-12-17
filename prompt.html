@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meeting Prompt</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Meeting Configuration</h2>
+    <input id="title" placeholder="Meeting Title">
+    <select id="type">
+        <option>Introduction</option>
+        <option>Project Discussion</option>
+        <option>Client Meeting</option>
+    </select>
+    <textarea id="prompt" placeholder="Instructions for AI"></textarea>
+    <button onclick="savePrompt()">Start Meeting</button>
+</div>
+<script src="js/prompt.js"></script>
+</body>
+</html>

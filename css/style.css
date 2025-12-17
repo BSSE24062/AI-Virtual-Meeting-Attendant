@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: white;
+}
+
+/* ===============================
+   MAIN CONTAINER
+   =============================== */
+
+.container {
+    width: 420px;
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    margin: 80px auto;
+    box-shadow: 0 0 30px rgba(0,255,255,0.45);
+}
+
+/* ===============================
+   HEADINGS
+   =============================== */
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ===============================
+   INPUTS
+   =============================== */
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00e6e6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #00cccc;
+}
+
+.ask-btn {
+    display: block;
+    margin: 15px auto;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: #000;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ask-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+}
+
+/* ===============================
+   AVATAR
+   =============================== */
+
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    animation: float 3s ease-in-out infinite;
+}
+
+.ai-label {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ===============================
+   LIVE RECORDING INDICATOR
+   =============================== */
+
+.recording {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #ff4d4d;
+}
+
+.recording-dot {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* ===============================
+   INTERACTION AREA (GLASS)
+   =============================== */
+
+.interaction-box {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    padding: 18px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+/* ===============================
+   Q / A BOXES
+   =============================== */
+
+.qa-box {
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    min-height: 40px;
+}
+
+/* ===============================
+   STATUS BADGES
+   =============================== */
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 6px;
+    margin-left: 6px;
+}
+
+.badge.answered {
+    background: #00ffcc;
+    color: #000;
+}
+
+.badge.unanswered {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+/* ===============================
+   MENU / NAVIGATION
+   =============================== */
+
+.menu button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.nav-buttons button {
+    width: 48%;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: black;
+}
+
+/* ===============================
+   MEETING RECORD CARD
+   =============================== */
+
+.meeting-card {
+    background: rgba(255,255,255,0.08);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364) !important;
+   /* display: flex;*/
+    /*justify-content: center;
+    align-items: flex-start;*/
+}

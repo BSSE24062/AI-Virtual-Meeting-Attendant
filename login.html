@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p style="text-align:center; margin-top:10px; font-size:14px;">
+        Don’t have an account?
+        <span style="color:#00ffff; cursor:pointer;"
+              onclick="window.location.href='signup.html'">
+            Sign Up
+        </span>
+    </p>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

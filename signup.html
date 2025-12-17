@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Account</h2>
+
+    <input id="name" placeholder="Full Name">
+    <input id="email" placeholder="Email">
+    <input id="role" placeholder="Role / Title">
+    <textarea id="bio" placeholder="Short Professional Bio"></textarea>
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="signup()">Sign Up</button>
+
+    <p style="text-align:center; margin-top:10px; font-size:14px;">
+        Already have an account?
+        <span style="color:#00ffff; cursor:pointer;"
+              onclick="window.location.href='login.html'">
+            Login
+        </span>
+    </p>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
