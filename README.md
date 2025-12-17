@@ -1,8 +1,3 @@
-# AI-Virtual-Meeting-Attendant
-Enterprise-ready virtual meeting assistant that enables professionals to attend multiple meetings simultaneously through AI-powered digital representatives.
-
-
-
 # AI Virtual Meeting Attendant
 
 > A sophisticated web application that enables users to create AI-powered virtual representatives for meeting attendance using voice interaction and intelligent response generation.
@@ -345,8 +340,9 @@ MIT License - Free for educational and personal use
 
 ## Author
 
-**Z4 Technologies**  
-2nd Year University Student  
+**Z4 Technologies**
+By Zakki Ullah  
+Information Technology University, Lahore, Pakistan  
 Software Requirement Engineering Project  
 
 ---
@@ -355,6 +351,7 @@ Software Requirement Engineering Project
 
 For questions or issues:
 - Company: Z4 Technologies
+- Email: z4@ieee.org
 - Project: AI Virtual Meeting Attendant
 
 ---
@@ -368,5 +365,5 @@ For questions or issues:
 
 ---
 
-**Made with ❤️ by Z4 Technologies**  
-**© 2024 Z4 Technologies. All rights reserved.**
+**Made by Z4 Technologies**  
+**© 2024 Z4 Technologies.**
