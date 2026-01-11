@@ -1,6 +1,4 @@
-// ===================================
 // TOAST NOTIFICATION SYSTEM
-// ===================================
 function showToast(message, type = 'success') {
     const toast = document.createElement('div');
     toast.className = 'toast';
@@ -27,17 +25,13 @@ function showToast(message, type = 'success') {
     }, 3000);
 }
 
-// ===================================
 // EMAIL VALIDATION
-// ===================================
 function isValidEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
 
-// ===================================
 // PASSWORD STRENGTH CHECKER
-// ===================================
 function getPasswordStrength(password) {
     let strength = 0;
     if (password.length >= 8) strength++;
@@ -47,9 +41,8 @@ function getPasswordStrength(password) {
     return strength;
 }
 
-// ===================================
 // SIGNUP FUNCTION
-// ===================================
+
 function signup(event) {
     event.preventDefault();
 
@@ -112,9 +105,8 @@ function signup(event) {
     }, 1500);
 }
 
-// ===================================
+
 // LOGIN FUNCTION
-// ===================================
 function login(event) {
     event.preventDefault();
 
