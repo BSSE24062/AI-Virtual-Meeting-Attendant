@@ -1,6 +1,5 @@
-/* ===================================
-   RESET & BASE STYLES
-   =================================== */
+/* 
+   RESET & BASE STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -31,9 +30,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ===================================
-   LOGO STYLING
-   =================================== */
+/*LOGO STYLING */
 .logo-header img {
     max-height: 60px;
     width: auto;
@@ -45,9 +42,7 @@ body {
     transform: scale(1.05);
 }
 
-/* ===================================
-   ANIMATED BACKGROUND
-   =================================== */
+/*   ANIMATED BACKGROUND */
 .animated-bg {
     position: fixed;
     width: 100%;
@@ -101,9 +96,7 @@ body {
     75% { transform: translate(40px, 50px) scale(1.05); }
 }
 
-/* ===================================
-   HERO SECTION (Landing Page)
-   =================================== */
+/* HERO SECTION (Landing Page) */
 .hero-container {
     min-height: 100vh;
     display: flex;
@@ -285,9 +278,7 @@ body {
     color: var(--text-dim);
 }
 
-/* ===================================
-   GLASS CONTAINER (Forms)
-   =================================== */
+/* GLASS CONTAINER (Forms) */
 .container {
     width: 90%;
     max-width: 480px;
@@ -314,9 +305,7 @@ body {
     }
 }
 
-/* ===================================
-   HEADINGS
-   =================================== */
+/* HEADINGS */
 h2 {
     text-align: center;
     margin-bottom: 30px;
@@ -328,9 +317,7 @@ h2 {
     background-clip: text;
 }
 
-/* ===================================
-   FORM ELEMENTS
-   =================================== */
+/* FORM ELEMENTS */
 input, textarea, select {
     width: 100%;
     padding: 14px 18px;
@@ -370,9 +357,7 @@ select option {
     padding: 10px;
 }
 
-/* ===================================
-   BUTTONS
-   =================================== */
+/* BUTTONS */
 button {
     width: 100%;
     padding: 14px;
@@ -414,9 +399,7 @@ button:active {
     box-shadow: 0 8px 35px var(--shadow);
 }
 
-/* ===================================
-   AVATAR SECTION
-   =================================== */
+/* AVATAR SECTION */
 .avatar-container {
     display: flex;
     flex-direction: column;
@@ -446,9 +429,7 @@ button:active {
     font-weight: 500;
 }
 
-/* ===================================
-   RECORDING INDICATOR
-   =================================== */
+/*RECORDING INDICATOR */
 .recording {
     display: flex;
     align-items: center;
@@ -474,9 +455,7 @@ button:active {
     50% { opacity: 0.3; }
 }
 
-/* ===================================
-   INTERACTION BOX
-   =================================== */
+/* INTERACTION BOX */
 .interaction-box {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -494,9 +473,8 @@ button:active {
     letter-spacing: 1px;
 }
 
-/* ===================================
-   Q/A BOXES
-   =================================== */
+/*
+   Q/A BOXES */
 .qa-box {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -509,9 +487,9 @@ button:active {
     line-height: 1.6;
 }
 
-/* ===================================
+/*
    BADGES
-   =================================== */
+    */
 .badge {
     display: inline-block;
     padding: 5px 12px;
@@ -531,9 +509,9 @@ button:active {
     color: #fff;
 }
 
-/* ===================================
+/* 
    MENU BUTTONS
-   =================================== */
+    */
 .menu button {
     width: 100%;
     margin: 12px 0;
@@ -545,9 +523,8 @@ button:active {
     gap: 10px;
 }
 
-/* ===================================
-   NAVIGATION BUTTONS
-   =================================== */
+/* NAVIGATION BUTTONS
+   */
 .nav-buttons {
     display: flex;
     justify-content: space-between;
@@ -563,9 +540,8 @@ button:active {
     color: #000;
 }
 
-/* ===================================
-   MEETING HISTORY CARD
-   =================================== */
+/* 
+   MEETING HISTORY CARD */
 .meeting-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -600,9 +576,9 @@ button:active {
     font-size: 14px;
 }
 
-/* ===================================
+/* 
    VIDEO ELEMENT
-   =================================== */
+    */
 video {
     border-radius: 16px;
     border: 2px solid var(--primary);
@@ -610,9 +586,9 @@ video {
     margin: 20px 0;
 }
 
-/* ===================================
+/* 
    LOADING SPINNER
-   =================================== */
+  */
 .spinner {
     width: 50px;
     height: 50px;
@@ -627,9 +603,9 @@ video {
     to { transform: rotate(360deg); }
 }
 
-/* ===================================
+/*
    RESPONSIVE DESIGN
-   =================================== */
+ */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 32px;
@@ -656,9 +632,9 @@ video {
     }
 }
 
-/* ===================================
+/*
    UTILITY CLASSES
-   =================================== */
+*/
 .text-center {
     text-align: center;
 }
@@ -671,9 +647,9 @@ video {
     margin-bottom: 20px;
 }
 
-/* ===================================
+/* 
    TOAST NOTIFICATIONS (Optional)
-   =================================== */
+  */
 .toast {
     position: fixed;
     top: 20px;
