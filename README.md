@@ -1,4 +1,4 @@
-# AI Virtual Meeting Attendant
+# AI Virtual Meeting Attendant (Prototype)
 
 > A sophisticated web application that enables users to create AI-powered virtual representatives for meeting attendance using voice interaction and intelligent response generation.
 
@@ -341,7 +341,7 @@ MIT License - Free for educational and personal use
 ## Author
 
 **Z4 Technologies**
-By Zakki Ullah  
+By Zakki Ullah Baig 
 Information Technology University, Lahore, Pakistan  
 Software Requirement Engineering Project  
 
@@ -351,7 +351,7 @@ Software Requirement Engineering Project
 
 For questions or issues:
 - Company: Z4 Technologies
-- Email: z4@ieee.org
+- Email: zakkiullahbaig580@gmail.com
 - Project: AI Virtual Meeting Attendant
 
 ---
@@ -365,5 +365,5 @@ For questions or issues:
 
 ---
 
-**Made by Z4 Technologies**  
+**Developed by Zakki Ullah Baig**  
 **© 2024 Z4 Technologies.**
