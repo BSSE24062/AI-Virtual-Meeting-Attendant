@@ -4,39 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - AI Virtual Attendant</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-3"></div>
-    </div>
 
     <div class="container" style="max-width: 600px;">
         <!-- Logo Header -->
         <div style="text-align: center; margin-bottom: 20px;">
-            <img src="assets/logo.png" alt="Z4 Technologies" style="height: 40px; width: auto;">
+            <img src="assets/logo.png" alt="Z4" style="height: 40px; width: auto;">
         </div>
 
         <!-- User Profile Section -->
         <div style="text-align: center; margin-bottom: 30px;">
-            <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 36px; box-shadow: 0 4px 20px var(--shadow);">
-                👤
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--primary); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 203, 213, 0.15);">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0f1115" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
             </div>
             <h2 style="margin-bottom: 5px;">Welcome, <span id="userName"></span></h2>
-            <p id="userRole" style="color: var(--text-dim); font-size: 14px;"></p>
+            <p id="userRole" style="color: var(--text-dim); font-size: 14.5px;"></p>
         </div>
 
         <!-- Stats Cards -->
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 30px;">
-            <div style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 16px; border: 1px solid var(--glass-border); text-align: center;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 32px;">
+            <div style="background: var(--dark-3); padding: 20px; border-radius: 8px; border: 1px solid var(--glass-border); text-align: center;">
                 <div style="font-size: 28px; font-weight: 700; color: var(--primary);" id="meetingCount">0</div>
                 <div style="font-size: 13px; color: var(--text-dim); margin-top: 5px;">Meetings Attended</div>
             </div>
-            <div style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 16px; border: 1px solid var(--glass-border); text-align: center;">
-                <div style="font-size: 28px; font-weight: 700; color: var(--secondary);">Active</div>
+            <div style="background: var(--dark-3); padding: 20px; border-radius: 8px; border: 1px solid var(--glass-border); text-align: center;">
+                <div style="font-size: 28px; font-weight: 700; color: var(--primary);">Active</div>
                 <div style="font-size: 13px; color: var(--text-dim); margin-top: 5px;">AI Status</div>
             </div>
         </div>
@@ -44,27 +42,23 @@
         <!-- Action Menu -->
         <div class="menu">
             <button onclick="startMeeting()">
-                <span style="font-size: 20px;">🎤</span>
                 Start New Meeting
             </button>
             <button onclick="viewHistory()">
-                <span style="font-size: 20px;">📜</span>
                 Meeting History
             </button>
             <button onclick="viewProfile()">
-                <span style="font-size: 20px;">⚙️</span>
                 Profile Settings
             </button>
-            <button onclick="logout()" style="background: rgba(255, 77, 77, 0.2); border: 1px solid rgba(255, 77, 77, 0.3);">
-                <span style="font-size: 20px;">🚪</span>
+            <button onclick="logout()" style="background: #e11d48; color: #ffffff; box-shadow: none;">
                 Logout
             </button>
         </div>
 
         <!-- Quick Tips -->
-        <div style="margin-top: 30px; padding: 20px; background: rgba(0, 230, 230, 0.1); border: 1px solid rgba(0, 230, 230, 0.3); border-radius: 12px;">
+        <div style="margin-top: 32px; padding: 20px; background: var(--dark-3); border: 1px solid var(--glass-border); border-radius: 8px;">
             <p style="margin: 0; font-size: 14px; color: var(--text-dim);">
-                <strong style="color: var(--primary);">💡 Tip:</strong> Your AI attendant learns from your profile. Keep your bio updated for better responses!
+                <strong style="color: var(--primary);">Tip:</strong> Your AI attendant learns from your profile. Keep your bio updated for better responses!
             </p>
         </div>
     </div>

@@ -340,7 +340,7 @@ MIT License - Free for educational and personal use
 
 ## Author
 
-**Z4 Technologies**
+**Z4**
 By Zakki Ullah Baig 
 Information Technology University, Lahore, Pakistan  
 Software Requirement Engineering Project  
@@ -350,7 +350,7 @@ Software Requirement Engineering Project
 ## Support
 
 For questions or issues:
-- Company: Z4 Technologies
+- Company: Z4
 - Email: zakkiullahbaig580@gmail.com
 - Project: AI Virtual Meeting Attendant
 
@@ -366,4 +366,4 @@ For questions or issues:
 ---
 
 **Developed by Zakki Ullah Baig**  
-**© 2024 Z4 Technologies.**
+**© 2024 Z4.**

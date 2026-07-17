@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Meeting - AI Virtual Attendant</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-3"></div>
-    </div>
 
     <div class="container" style="max-width: 750px;">
         <!-- Logo Header -->
         <div style="text-align: center; margin-bottom: 15px;">
-            <img src="assets/logo.png" alt="Z4 Technologies" style="height: 35px; width: auto;">
+            <img src="assets/logo.png" alt="Z4" style="height: 35px; width: auto;">
         </div>
 
         <!-- Meeting Header -->
         <div style="text-align: center; margin-bottom: 25px;">
             <h2 id="meetingTitle" style="margin-bottom: 10px;">Meeting</h2>
-            <p id="meetingType" style="color: var(--text-dim); font-size: 14px; margin: 0;"></p>
+            <p id="meetingType" style="color: var(--text-dim); font-size: 14.5px; margin: 0;"></p>
         </div>
 
         <!-- Live Indicator -->
@@ -60,45 +55,45 @@
 
             <!-- Voice Button -->
             <button class="ask-btn" onclick="askQuestion()" id="voiceBtn">
-                🎤 Ask Question
+                Ask Question
             </button>
 
             <!-- Browser Support Notice -->
             <p id="browserNotice" style="text-align: center; font-size: 12px; color: var(--text-dim); margin-top: 15px; display: none;">
-                ⚠️ Voice recognition works best in Chrome or Edge
+                Voice recognition works best in Chrome or Edge
             </p>
         </div>
 
         <!-- Meeting Stats -->
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 25px 0;">
-            <div style="text-align: center; padding: 15px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 1px solid var(--glass-border);">
+            <div style="text-align: center; padding: 15px; background: var(--dark-3); border-radius: 8px; border: 1px solid var(--glass-border);">
                 <div style="font-size: 20px; font-weight: 700; color: var(--primary);" id="questionCount">0</div>
                 <div style="font-size: 11px; color: var(--text-dim); margin-top: 3px;">Questions</div>
             </div>
-            <div style="text-align: center; padding: 15px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 1px solid var(--glass-border);">
-                <div style="font-size: 20px; font-weight: 700; color: var(--secondary);" id="duration">00:00</div>
+            <div style="text-align: center; padding: 15px; background: var(--dark-3); border-radius: 8px; border: 1px solid var(--glass-border);">
+                <div style="font-size: 20px; font-weight: 700; color: var(--primary);" id="duration">00:00</div>
                 <div style="font-size: 11px; color: var(--text-dim); margin-top: 3px;">Duration</div>
             </div>
-            <div style="text-align: center; padding: 15px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; border: 1px solid var(--glass-border);">
-                <div style="font-size: 20px; font-weight: 700; color: #00ffcc;">✓</div>
-                <div style="font-size: 11px; color: var(--text-dim); margin-top: 3px;">Active</div>
+            <div style="text-align: center; padding: 15px; background: var(--dark-3); border-radius: 8px; border: 1px solid var(--glass-border);">
+                <div style="font-size: 20px; font-weight: 700; color: var(--primary);">Active</div>
+                <div style="font-size: 11px; color: var(--text-dim); margin-top: 3px;">Status</div>
             </div>
         </div>
 
         <!-- Navigation -->
         <div class="nav-buttons">
             <button onclick="window.location.href='dashboard.html'">
-                ← Dashboard
+                Back to Dashboard
             </button>
             <button onclick="endMeeting()">
-                📜 End & View Summary
+                End & View Summary
             </button>
         </div>
 
         <!-- Footer -->
         <div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid var(--glass-border);">
             <p style="font-size: 11px; color: var(--text-dim); margin: 0;">
-                Powered by Z4 Technologies © 2025
+                Powered by Z4 © 2025
             </p>
         </div>
     </div>

@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generate AI Avatar - AI Virtual Attendant</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-3"></div>
-    </div>
 
     <div class="container" style="max-width: 600px;">
         <!-- Logo Header -->
         <div style="text-align: center; margin-bottom: 20px;">
-            <img src="assets/logo.png" alt="Z4 Technologies" style="height: 40px; width: auto;">
+            <img src="assets/logo.png" alt="Z4" style="height: 40px; width: auto;">
         </div>
 
         <h2>Generate Your AI Avatar</h2>
@@ -26,7 +21,7 @@
         </p>
 
         <!-- Status Display -->
-        <div id="statusBox" style="text-align: center; margin: 20px 0; padding: 15px; background: rgba(0, 230, 230, 0.1); border: 1px solid rgba(0, 230, 230, 0.3); border-radius: 12px;">
+        <div id="statusBox" style="text-align: center; margin: 20px 0; padding: 15px; background: var(--dark-3); border: 1px solid var(--glass-border); border-radius: 8px;">
             <p style="margin: 0; color: var(--primary);" id="statusText">Initializing camera...</p>
         </div>
 
@@ -38,7 +33,7 @@
 
         <!-- Preview Image -->
         <div id="previewContainer" style="display: none; text-align: center; margin: 20px 0;">
-            <img id="preview" style="max-width: 100%; border-radius: 16px; border: 2px solid var(--primary); box-shadow: 0 4px 20px var(--shadow);">
+            <img id="preview" style="max-width: 100%; border-radius: 8px; border: 2px solid var(--primary); box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
         </div>
 
         <!-- Action Buttons -->
@@ -47,23 +42,23 @@
                 Start Camera
             </button>
             <button id="captureBtn" onclick="capturePhoto()" style="display: none;">
-                📸 Capture Photo
+                Capture Photo
             </button>
             <button id="retakeBtn" onclick="retakePhoto()" style="display: none;">
-                🔄 Retake
+                Retake
             </button>
             <button id="generateBtn" onclick="generateAI()" style="display: none;">
-                ✨ Generate AI Avatar
+                Generate AI Avatar
             </button>
-            <button onclick="window.location.href='dashboard.html'" style="background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border);">
-                ← Back to Dashboard
+            <button onclick="window.location.href='dashboard.html'" style="background: var(--dark-3); border: 1px solid var(--glass-border); color: var(--text);">
+                Back to Dashboard
             </button>
         </div>
 
         <!-- Info Box -->
-        <div style="margin-top: 30px; padding: 15px; background: rgba(102, 126, 234, 0.1); border: 1px solid rgba(102, 126, 234, 0.3); border-radius: 12px;">
+        <div style="margin-top: 30px; padding: 15px; background: var(--dark-3); border: 1px solid var(--glass-border); border-radius: 8px;">
             <p style="margin: 0; font-size: 13px; color: var(--text-dim);">
-                <strong style="color: var(--secondary);">ℹ️ Note:</strong> This is a demo. In a real application, facial recognition would generate a realistic AI avatar.
+                <strong style="color: var(--primary);">Note:</strong> This is a demo. In a real application, facial recognition would generate a realistic AI avatar.
             </p>
         </div>
     </div>
